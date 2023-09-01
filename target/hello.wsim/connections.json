@@ -1,0 +1,90 @@
+{
+  "version": "connections-0.1",
+  "connections": [
+    {
+      "source": "root/Default/cloud.Api/OnRequestHandler-bf0e8f58",
+      "target": "root/Default/ex.Table",
+      "name": "list()"
+    },
+    {
+      "source": "root/Default/cloud.Api/OnRequestHandler-bf0e8f58",
+      "target": "root/Default/ex.Table",
+      "name": "$inflight_init()"
+    },
+    {
+      "source": "root/Default/cloud.Api",
+      "target": "root/Default/cloud.Api/OnRequestHandler-bf0e8f58",
+      "name": "get()"
+    },
+    {
+      "source": "root/Default/cloud.Api/OnRequestHandler-15ce2678",
+      "target": "root/Default/ex.Table",
+      "name": "get()"
+    },
+    {
+      "source": "root/Default/cloud.Api/OnRequestHandler-15ce2678",
+      "target": "root/Default/ex.Table",
+      "name": "$inflight_init()"
+    },
+    {
+      "source": "root/Default/cloud.Api",
+      "target": "root/Default/cloud.Api/OnRequestHandler-15ce2678",
+      "name": "get()"
+    },
+    {
+      "source": "root/Default/cloud.Api/OnRequestHandler-88f82eec",
+      "target": "root/Default/cloud.Counter",
+      "name": "inc()"
+    },
+    {
+      "source": "root/Default/cloud.Api/OnRequestHandler-88f82eec",
+      "target": "root/Default/cloud.Counter",
+      "name": "$inflight_init()"
+    },
+    {
+      "source": "root/Default/cloud.Api/OnRequestHandler-88f82eec",
+      "target": "root/Default/ex.Table",
+      "name": "insert()"
+    },
+    {
+      "source": "root/Default/cloud.Api/OnRequestHandler-88f82eec",
+      "target": "root/Default/ex.Table",
+      "name": "$inflight_init()"
+    },
+    {
+      "source": "root/Default/cloud.Api",
+      "target": "root/Default/cloud.Api/OnRequestHandler-88f82eec",
+      "name": "post()"
+    },
+    {
+      "source": "root/Default/cloud.Api/OnRequestHandler-71671352",
+      "target": "root/Default/ex.Table",
+      "name": "update()"
+    },
+    {
+      "source": "root/Default/cloud.Api/OnRequestHandler-71671352",
+      "target": "root/Default/ex.Table",
+      "name": "$inflight_init()"
+    },
+    {
+      "source": "root/Default/cloud.Api",
+      "target": "root/Default/cloud.Api/OnRequestHandler-71671352",
+      "name": "put()"
+    },
+    {
+      "source": "root/Default/cloud.Api/OnRequestHandler-a3c6f155",
+      "target": "root/Default/ex.Table",
+      "name": "delete()"
+    },
+    {
+      "source": "root/Default/cloud.Api/OnRequestHandler-a3c6f155",
+      "target": "root/Default/ex.Table",
+      "name": "$inflight_init()"
+    },
+    {
+      "source": "root/Default/cloud.Api",
+      "target": "root/Default/cloud.Api/OnRequestHandler-a3c6f155",
+      "name": "delete()"
+    }
+  ]
+}

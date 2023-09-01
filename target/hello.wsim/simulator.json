@@ -1,0 +1,283 @@
+{
+  "resources": [
+    {
+      "type": "wingsdk.cloud.TestRunner",
+      "path": "root/cloud.TestRunner",
+      "props": {
+        "tests": {}
+      },
+      "attrs": {}
+    },
+    {
+      "type": "wingsdk.cloud.Table",
+      "path": "root/Default/ex.Table",
+      "props": {
+        "name": "employees",
+        "columns": {
+          "name": 0
+        },
+        "primaryKey": "id",
+        "initialRows": {}
+      },
+      "attrs": {}
+    },
+    {
+      "type": "wingsdk.cloud.Function",
+      "path": "root/Default/cloud.Api/OnRequestHandler-bf0e8f58",
+      "props": {
+        "sourceCodeFile": ".wing/onrequesthandler-bf0e8f58_c84c0247.js",
+        "sourceCodeLanguage": "javascript",
+        "environmentVariables": {
+          "WING_TARGET": "sim",
+          "TABLE_HANDLE_64086798": "${root/Default/ex.Table#attrs.handle}"
+        },
+        "timeout": 60000
+      },
+      "attrs": {}
+    },
+    {
+      "type": "wingsdk.cloud.Api",
+      "path": "root/Default/cloud.Api",
+      "props": {
+        "openApiSpec": {
+          "openapi": "3.0.3",
+          "paths": {
+            "/employees": {
+              "get": {
+                "operationId": "get-employees",
+                "responses": {
+                  "200": {
+                    "description": "200 response",
+                    "content": {}
+                  }
+                },
+                "parameters": []
+              },
+              "post": {
+                "operationId": "post-employees",
+                "responses": {
+                  "200": {
+                    "description": "200 response",
+                    "content": {}
+                  }
+                },
+                "parameters": []
+              }
+            },
+            "/employees/{id}": {
+              "get": {
+                "operationId": "get-employees/{id}",
+                "responses": {
+                  "200": {
+                    "description": "200 response",
+                    "content": {}
+                  }
+                },
+                "parameters": [
+                  {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              "put": {
+                "operationId": "put-employees/{id}",
+                "responses": {
+                  "200": {
+                    "description": "200 response",
+                    "content": {}
+                  }
+                },
+                "parameters": [
+                  {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              "delete": {
+                "operationId": "delete-employees/{id}",
+                "responses": {
+                  "200": {
+                    "description": "200 response",
+                    "content": {}
+                  }
+                },
+                "parameters": [
+                  {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "attrs": {}
+    },
+    {
+      "type": "wingsdk.sim.EventMapping",
+      "path": "root/Default/cloud.Api/ApiEventMapping-bf0e8f58",
+      "props": {
+        "subscriber": "${root/Default/cloud.Api/OnRequestHandler-bf0e8f58#attrs.handle}",
+        "publisher": "${root/Default/cloud.Api#attrs.handle}",
+        "subscriptionProps": {
+          "routes": [
+            {
+              "path": "/employees",
+              "method": "GET"
+            }
+          ]
+        }
+      },
+      "attrs": {}
+    },
+    {
+      "type": "wingsdk.cloud.Function",
+      "path": "root/Default/cloud.Api/OnRequestHandler-15ce2678",
+      "props": {
+        "sourceCodeFile": ".wing/onrequesthandler-15ce2678_c8f79806.js",
+        "sourceCodeLanguage": "javascript",
+        "environmentVariables": {
+          "WING_TARGET": "sim",
+          "TABLE_HANDLE_64086798": "${root/Default/ex.Table#attrs.handle}"
+        },
+        "timeout": 60000
+      },
+      "attrs": {}
+    },
+    {
+      "type": "wingsdk.sim.EventMapping",
+      "path": "root/Default/cloud.Api/ApiEventMapping-15ce2678",
+      "props": {
+        "subscriber": "${root/Default/cloud.Api/OnRequestHandler-15ce2678#attrs.handle}",
+        "publisher": "${root/Default/cloud.Api#attrs.handle}",
+        "subscriptionProps": {
+          "routes": [
+            {
+              "path": "/employees/{id}",
+              "method": "GET"
+            }
+          ]
+        }
+      },
+      "attrs": {}
+    },
+    {
+      "type": "wingsdk.cloud.Counter",
+      "path": "root/Default/cloud.Counter",
+      "props": {
+        "initial": 0
+      },
+      "attrs": {}
+    },
+    {
+      "type": "wingsdk.cloud.Function",
+      "path": "root/Default/cloud.Api/OnRequestHandler-88f82eec",
+      "props": {
+        "sourceCodeFile": ".wing/onrequesthandler-88f82eec_c862e387.js",
+        "sourceCodeLanguage": "javascript",
+        "environmentVariables": {
+          "WING_TARGET": "sim",
+          "COUNTER_HANDLE_e5a56560": "${root/Default/cloud.Counter#attrs.handle}",
+          "TABLE_HANDLE_64086798": "${root/Default/ex.Table#attrs.handle}"
+        },
+        "timeout": 60000
+      },
+      "attrs": {}
+    },
+    {
+      "type": "wingsdk.sim.EventMapping",
+      "path": "root/Default/cloud.Api/ApiEventMapping-88f82eec",
+      "props": {
+        "subscriber": "${root/Default/cloud.Api/OnRequestHandler-88f82eec#attrs.handle}",
+        "publisher": "${root/Default/cloud.Api#attrs.handle}",
+        "subscriptionProps": {
+          "routes": [
+            {
+              "path": "/employees",
+              "method": "POST"
+            }
+          ]
+        }
+      },
+      "attrs": {}
+    },
+    {
+      "type": "wingsdk.cloud.Function",
+      "path": "root/Default/cloud.Api/OnRequestHandler-71671352",
+      "props": {
+        "sourceCodeFile": ".wing/onrequesthandler-71671352_c8fc88bf.js",
+        "sourceCodeLanguage": "javascript",
+        "environmentVariables": {
+          "WING_TARGET": "sim",
+          "TABLE_HANDLE_64086798": "${root/Default/ex.Table#attrs.handle}"
+        },
+        "timeout": 60000
+      },
+      "attrs": {}
+    },
+    {
+      "type": "wingsdk.sim.EventMapping",
+      "path": "root/Default/cloud.Api/ApiEventMapping-71671352",
+      "props": {
+        "subscriber": "${root/Default/cloud.Api/OnRequestHandler-71671352#attrs.handle}",
+        "publisher": "${root/Default/cloud.Api#attrs.handle}",
+        "subscriptionProps": {
+          "routes": [
+            {
+              "path": "/employees/{id}",
+              "method": "PUT"
+            }
+          ]
+        }
+      },
+      "attrs": {}
+    },
+    {
+      "type": "wingsdk.cloud.Function",
+      "path": "root/Default/cloud.Api/OnRequestHandler-a3c6f155",
+      "props": {
+        "sourceCodeFile": ".wing/onrequesthandler-a3c6f155_c8a9c792.js",
+        "sourceCodeLanguage": "javascript",
+        "environmentVariables": {
+          "WING_TARGET": "sim",
+          "TABLE_HANDLE_64086798": "${root/Default/ex.Table#attrs.handle}"
+        },
+        "timeout": 60000
+      },
+      "attrs": {}
+    },
+    {
+      "type": "wingsdk.sim.EventMapping",
+      "path": "root/Default/cloud.Api/ApiEventMapping-a3c6f155",
+      "props": {
+        "subscriber": "${root/Default/cloud.Api/OnRequestHandler-a3c6f155#attrs.handle}",
+        "publisher": "${root/Default/cloud.Api#attrs.handle}",
+        "subscriptionProps": {
+          "routes": [
+            {
+              "path": "/employees/{id}",
+              "method": "DELETE"
+            }
+          ]
+        }
+      },
+      "attrs": {}
+    }
+  ],
+  "sdkVersion": "0.28.2"
+}
