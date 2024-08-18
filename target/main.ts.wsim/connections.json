@@ -1,0 +1,25 @@
+{
+  "version": "connections-0.1",
+  "connections": [
+    {
+      "source": "root/Default/my_api",
+      "sourceOp": "request",
+      "target": "root/Default/my_api/OnRequestHandler0",
+      "targetOp": "invoke",
+      "name": "get /status"
+    },
+    {
+      "source": "root/Default/my_api",
+      "sourceOp": "request",
+      "target": "root/Default/my_api/OnRequestHandler1",
+      "targetOp": "invoke",
+      "name": "post /intents"
+    },
+    {
+      "source": "root/Default/my_api/Endpoint",
+      "target": "root/Default/my_api",
+      "targetOp": "url",
+      "name": "<ref>"
+    }
+  ]
+}
